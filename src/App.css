@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* CONTAINER */
+.app {
+  width: 95%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin-top: 60px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  color: #00ffe0;
+  margin-bottom: 30px;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+/* FORM */
+.contact-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.contact-form input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.contact-form small {
+  display: block;
+  color: #ff6b6b;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(45deg, #00ffe0, #00bfff);
+  color: #111;
+  border: none;
+  font-weight: 600;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: linear-gradient(45deg, #00bfff, #00ffe0);
+}
+
+/* SEARCH */
+.search-bar {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 25px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+}
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+/* CONTACT LIST */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s, background 0.3s ease;
+  animation: fadeIn 0.4s ease;
+}
+.contact-item:hover {
+  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.contact-item input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.contact-item div {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-item button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.contact-item button:hover {
+  transform: scale(1.2);
+}
+
+.contact-item button:first-of-type {
+  color: #ffc107;
+}
+
+.contact-item button:last-of-type {
+  color: #ff4d4d;
+}
+
+/* DELETE MULTIPLE BUTTON */
+button.delete-selected {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #ff4d4d, #ff0000);
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.delete-selected:hover {
+  background: linear-gradient(45deg, #ff0000, #ff4d4d);
+}
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+  z-index: 999;
+}
+
+.modal {
+  background-color: #1a2634;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.modal p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  margin: 0 10px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.modal button:first-of-type {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
